@@ -1,4 +1,4 @@
-# Music AI - Front-end Growth Test
+# Music AI - Web Developer Growth Test
 
 ![Screen](./.github/intro-screen.png)
 
