@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-primary {
+      @apply py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75;
+    }
+
+    .ms-svg-fill-white path {
+      @apply fill-white;
+    }
+    .ms-svg-fill-msprimary path {
+      @apply fill-msprimary;
+    }
+    .ms-svg-stroke-white path {
+      @apply stroke-white;
+    }
+    .ms-svg-stroke-msprimary path {
+      @apply stroke-msprimary;
+    }
+
+    .gradient-circle-one {
+      position: absolute;
+      z-index: 2;
+    
+      width: 1072px;
+      height: 1072px;
+      left: -346px;
+      top: -58px;
+    
+      background: radial-gradient(50% 50% at 50% 50%, #1040FF 0%, rgba(1, 1, 1, 0) 100%);
+      opacity: 0.2;
+    }
+    
+    .gradient-circle-two {
+      position: absolute;
+      z-index: 2;
+      
+      width: 1335px;
+      height: 1335px;
+      right: -559px;
+      top: -92px;
+    
+      background: radial-gradient(50% 50% at 50% 50%, #1040FF 0%, rgba(1, 1, 1, 0) 100%);
+      opacity: 0.2;
+    }
+}
