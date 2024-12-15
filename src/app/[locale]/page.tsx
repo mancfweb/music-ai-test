@@ -2,8 +2,6 @@ import { setRequestLocale } from 'next-intl/server'
 
 import { Pages, Page, ContentSection } from '@/types/pages'
 
-import { Link } from '@/i18n/routing'
-
 import HeroPlayer from '@/components/sections/HeroPlayer'
 import Brands from '@/components/sections/Brands'
 import CardContentGrid from '@/components/sections/CardContentGrid'
@@ -54,14 +52,6 @@ export default async function Home({
           data={section}
         />
       ))}
-{/* 
-      <Link className="btn-primary" href="/" locale="pt">
-        Switch to PT
-      </Link>
-      <br />
-      <Link href="/" locale="en">
-        Switch to EN
-      </Link> */}
     </main>
   )
 }
