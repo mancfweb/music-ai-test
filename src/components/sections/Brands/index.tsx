@@ -5,14 +5,20 @@ const Brands = ({ data }: { data: ContentSection }) => {
   if (!data.brands) return <></>
 
   return (
-    <section className="flex w-full mb-10 overflow-hidden">
-      <ul className="flex items-center gap-10 w-full min-w-[1512px]">
-        {data.brands?.map((brand) => (
-          <li key={`brand-item-${brand.id}`}>
-            <img src={brand.url} alt={brand.title} className="h-[40px]" />
-          </li>
+    <section className="flex w-full mb-10">
+      <div className="flex gap-10 w-full overflow-hidden">
+        {[0, 1].map((item) => (
+          <ul
+            key={`brands-carousel-group-${item}`}
+            className="flex items-center shrink-0 gap-10 w-full animate-scrolling">
+            {data.brands?.map((brand) => (
+              <li key={`brand-item-${brand.id}`}>
+                <img src={brand.url} alt={brand.title} className="h-[40px]" />
+              </li>
+            ))}
+          </ul>
         ))}
-      </ul>
+      </div>
     </section>
   )
 }

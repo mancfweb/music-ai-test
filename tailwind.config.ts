@@ -33,6 +33,15 @@ const config: Config = {
           800: '#212121',
         },
       },
+      keyframes: {
+        scrolling: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+      animation: {
+        scrolling: 'scrolling 120s linear infinite',
+      },
     },
   },
   plugins: [],
