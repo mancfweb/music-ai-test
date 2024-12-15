@@ -1,6 +1,6 @@
 'use client'
 
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 import { IGlobal, FooterMenu } from '@/types/global'
 import { Link, useRouter, usePathname } from '@/i18n/routing'
@@ -58,6 +58,7 @@ const Footer = ({ data }: { data: IGlobal }) => {
   const pathname = usePathname()
   const router = useRouter()
   const locale = useLocale()
+  const t = useTranslations('footer')
 
   const onChangeLocale = (locale: string) => {
     router.replace(pathname, { locale })
@@ -119,7 +120,16 @@ const Footer = ({ data }: { data: IGlobal }) => {
 
         <hr className="mt-20 mb-10 border-mswhite-25" />
 
-        <p>{data.copyright}</p>
+        <div className="flex items-center justify-between w-full">
+          <p>{data.copyright}</p>
+          <p className="flex items-center gap-1.5 text-sm text-mswhite-40">
+            Status{' '}
+            <span className="flex items-center gap-1.5 text-[#0AFFA7]">
+              <span className="flex w-1.5 h-1.5 rounded-full bg-[#0AFFA7]" />{' '}
+              {t('status')}
+            </span>
+          </p>
+        </div>
       </div>
     </footer>
   )

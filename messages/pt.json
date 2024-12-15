@@ -1,6 +1,5 @@
 {
-    "HomePage": {
-      "title": "Deu certo PT!",
-      "about": "Go to the about page"
-    }
+  "footer": {
+    "status": "Todos os sistemas estão normais"
+  }
 }
