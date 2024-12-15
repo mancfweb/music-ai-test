@@ -19,6 +19,7 @@ const config: Config = {
         'msprimary-dark': '#0e37da',
         msalternative: '#75A5FF',
         mswhite: {
+          10: 'rgba(255, 255, 255, 0.10)',
           25: 'rgba(255, 255, 255, 0.25)',
           40: 'rgba(255, 255, 255, 0.40)',
           60: 'rgba(255, 255, 255, 0.60)',

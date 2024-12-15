@@ -1,8 +1,13 @@
+'use client'
+
+import { useLocale } from 'next-intl'
+
 import { IGlobal, FooterMenu } from '@/types/global'
+import { Link, useRouter, usePathname } from '@/i18n/routing'
 
 import Logo from '@/components/ui/Logo'
 import Icon from '@/components/ui/Icon'
-import { Link } from '@/i18n/routing'
+import Select from '@/components/ui/Select'
 
 const DropDownMenu = ({ item }: { item: FooterMenu }) => (
   <ul className="flex flex-col gap-4">
@@ -50,6 +55,14 @@ const MenuItem = ({
 }
 
 const Footer = ({ data }: { data: IGlobal }) => {
+  const pathname = usePathname()
+  const router = useRouter()
+  const locale = useLocale()
+
+  const onChangeLocale = (locale: string) => {
+    router.replace(pathname, { locale })
+  }
+
   const socialItems = Object.keys(data.social)
 
   return (
@@ -62,10 +75,13 @@ const Footer = ({ data }: { data: IGlobal }) => {
               <p className="mt-2">{data.helpText}</p>
             </div>
 
-            <select className="my-10">
-              <option>English</option>
-              <option>Português</option>
-            </select>
+            <Select
+              className="my-10"
+              defaultValue={locale}
+              onChange={(ev) => onChangeLocale(ev.target.value)}>
+              <Select.Option value="en">English</Select.Option>
+              <Select.Option value="pt">Português</Select.Option>
+            </Select>
 
             <ul className="flex items-center gap-6">
               {socialItems.map((item: string) => {
