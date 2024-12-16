@@ -1,5 +1,11 @@
 {
-    "footer": {
-      "status": "All systems are normal"
-    }
+  "common": {
+    "try-now": "Try now"
+  },
+  "hero-player": {
+    "player-cta": "Upload your own track"
+  },
+  "footer": {
+    "status": "All systems are normal"
+  }
 }

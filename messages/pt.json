@@ -1,4 +1,10 @@
 {
+  "common": {
+    "try-now": "Teste agora"
+  },
+  "hero-player": {
+    "player-cta": "Carregue sua faixa"
+  },
   "footer": {
     "status": "Todos os sistemas estão normais"
   }

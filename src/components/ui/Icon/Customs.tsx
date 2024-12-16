@@ -29,6 +29,30 @@ export const customIcons = {
         d="M16.95 15.665V7.18H8.464m7.779.707L7.05 17.079"></path>
     </svg>
   ),
+  play: () => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="100%"
+      height="100%"
+      fill="none"
+      viewBox="0 0 20 20">
+      <path
+        fill="#000"
+        d="M17.009 9.186a.92.92 0 0 1 0 1.628L5.223 17.33c-.655.362-1.473-.09-1.473-.815V3.486c0-.724.818-1.177 1.473-.815z"></path>
+    </svg>
+  ),
+  pause: () => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="100%"
+      height="100%"
+      fill="none"
+      viewBox="0 0 24 24">
+      <path
+        fill="#000"
+        d="M8 3.25c.966 0 1.75.784 1.75 1.75v14a1.75 1.75 0 1 1-3.5 0V5c0-.966.784-1.75 1.75-1.75M16 3.25c.966 0 1.75.784 1.75 1.75v14a1.75 1.75 0 1 1-3.5 0V5c0-.966.784-1.75 1.75-1.75"></path>
+    </svg>
+  ),
   bars: () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
