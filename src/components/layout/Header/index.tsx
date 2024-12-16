@@ -10,7 +10,7 @@ import Icon from '@/components/ui/Icon'
 
 const headerClasses = {
   mobileOpen: 'inset-0 z-[9991] bg-black flex-col justify-start items-start',
-  default: 'top-0 inset-x-0 justify-between items-center',
+  default: 'z-[999] top-0 inset-x-0 justify-between items-center',
 }
 
 const Header = ({ data }: { data: IGlobal }) => {
