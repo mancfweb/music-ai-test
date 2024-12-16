@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { setRequestLocale } from 'next-intl/server'
 
 import { Pages, Page, ContentSection } from '@/types/pages'
@@ -28,6 +29,33 @@ const SectionComponent = ({
   return <Component data={data} />
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+
+  const fetchData = await fetch(
+    `http://127.0.0.1:4000/pages?locale=${locale ?? 'en'}`,
+  )
+  const pages = (await fetchData.json()) satisfies Pages
+  const homePageData = pages.find((p: Page) => p.slug === '/') as Page
+  const metadata = homePageData.metadata
+  const languages = {} as { [key: string]: string }
+  homePageData.alternates.forEach((item) => {
+    languages[item.locale] = item.path
+  })
+  return {
+    title: metadata.metaTitle,
+    description: metadata.metaDescription,
+    robots: metadata.robots,
+    alternates: {
+      languages,
+    },
+  }
+}
+
 export default async function Home({
   params,
 }: {
@@ -41,7 +69,7 @@ export default async function Home({
     `http://127.0.0.1:4000/pages?locale=${locale ?? 'en'}`,
   )
   const pages = (await fetchData.json()) satisfies Pages
-  const homePageData = pages[0] as Page
+  const homePageData = pages.find((p: Page) => p.slug === '/') as Page
 
   return (
     <main>
