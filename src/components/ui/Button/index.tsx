@@ -14,7 +14,7 @@ const appearances = {
   },
   ghost: {
     blue: 'bg-transparent text-msprimary ms-svg-stroke-msprimary',
-    white: 'bg-transparent text-white ms-svg-stroke-white',
+    white: 'bg-transparent text-white hover:text-mswhite-80',
   },
 }
 

@@ -18,11 +18,13 @@ const config: Config = {
         msprimary: '#1040FF',
         'msprimary-dark': '#0e37da',
         msalternative: '#75A5FF',
+        'msalternative-light': '#afcbff',
         mswhite: {
           10: 'rgba(255, 255, 255, 0.10)',
           25: 'rgba(255, 255, 255, 0.25)',
           40: 'rgba(255, 255, 255, 0.40)',
           60: 'rgba(255, 255, 255, 0.60)',
+          80: 'rgba(255, 255, 255, 0.80)',
         },
         msgray: {
           100: '#A8A8A8',

@@ -71,7 +71,7 @@ const HeroPlayer = ({ data }: { data: ContentSection }) => {
               <div className="h-full border-l border-msgray-900 pl-3">
                 <a
                   href="#"
-                  className="flex items-center py-2 px-3 text-white text-center text-sm">
+                  className="flex items-center py-2 px-3 text-white text-center text-sm hover:text-mswhite-80">
                   {t('hero-player.player-cta')}
                 </a>
               </div>

@@ -41,7 +41,7 @@ const Carousel = ({ data, onSwiper, className }: ICarousel) => {
             </header>
             {item.button && (
               <Link
-                className="flex items-center gap-5 text-msalternative"
+                className="flex items-center gap-5 text-msalternative hover:text-msalternative-light"
                 href={item.button.url}
                 title={item.button.text}>
                 {item.button.text}{' '}

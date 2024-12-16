@@ -71,7 +71,7 @@ const Header = ({ data }: { data: IGlobal }) => {
         <Link
           title={linkItem.title}
           href={linkItem.link ?? '#'}
-          className={`${menuIsOpen ? 'flex mb-10' : 'hidden'} items-center py-3 text-base font-semibold text-white lg:flex`}>
+          className={`${menuIsOpen ? 'flex mb-10' : 'hidden'} items-center py-3 text-base font-semibold text-white lg:flex hover:text-mswhite-80`}>
           {linkItem.title} <Icon name="arrow-right" className="w-6 h-6" />
         </Link>
       )}

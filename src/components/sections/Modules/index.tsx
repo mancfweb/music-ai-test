@@ -64,7 +64,7 @@ const Modules = ({ data }: { data: ContentSection }) => {
 
       {data.cards && (
         <Carousel
-          className="mt-10 !px-6 lg:px-0 lg:overflow-hidden"
+          className="mt-10 !px-6 lg:!px-0 lg:overflow-hidden"
           data={data.cards}
           onSwiper={(swiper) => {
             carouselEl.current = swiper

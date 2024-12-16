@@ -16,7 +16,7 @@ const DropDownMenu = ({ item }: { item: FooterMenu }) => (
         <Link
           href={subItem.link}
           title={subItem.title}
-          className="text-mswhite-60 font-semibold">
+          className="text-mswhite-60 font-semibold hover:text-mswhite-80">
           {subItem.title}
         </Link>
       </li>
@@ -90,7 +90,11 @@ const Footer = ({ data }: { data: IGlobal }) => {
 
                 return (
                   <li key={`footer-social-item-${item}`}>
-                    <a href={itemUrl} target="_blank" title={item}>
+                    <a
+                      href={itemUrl}
+                      target="_blank"
+                      title={item}
+                      className="text-white hover:text-mswhite-80">
                       <Icon
                         name={item.toLocaleLowerCase()}
                         className="w-6 h-6"
