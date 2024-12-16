@@ -20,13 +20,10 @@ const Carousel = ({ data, onSwiper, className }: ICarousel) => {
       className={className}
       onSwiper={onSwiper}
       breakpoints={{
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 24,
-        },
         768: {
-          slidesPerView: 1,
-          spaceBetween: 24,
+          spaceBetween: 0,
+          centeredSlides: true,
+          slidesPerView: 'auto',
         },
         1024: {
           slidesPerView: 3,
@@ -35,10 +32,12 @@ const Carousel = ({ data, onSwiper, className }: ICarousel) => {
       }}>
       {data.map((item) => (
         <SwiperSlide key={`modules-item-${item.id}`}>
-          <article className="flex flex-col h-full p-5 bg-msgray-800 rounded-2xl">
+          <article className="flex flex-col w-full max-w-[84vw] h-full p-5 bg-msgray-800 rounded-2xl">
             <header className="h-full">
               <h3 className="text-xl text-white">{item.title}</h3>
-              <p className="mt-2.5 mb-5">{item.description}</p>
+              <p className="mt-2.5 mb-5 min-h-[72px] lg:min-h-auto">
+                {item.description}
+              </p>
             </header>
             {item.button && (
               <Link

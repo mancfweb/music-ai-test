@@ -39,14 +39,14 @@ const Modules = ({ data }: { data: ContentSection }) => {
   }
 
   return (
-    <section className="container mx-auto py-20">
-      <header className="flex items-center justify-between w-full h-full">
+    <section className="container mx-auto pt-0 pb-10 lg:py-20">
+      <header className="flex items-center justify-between w-full h-full px-6 lg:px-0">
         <div className="max-w-[585px]">
           <h2 className="text-[32px] text-white">{data.title}</h2>
           <p className="text-lg text-white">{data.description}</p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="hidden items-center gap-2 lg:flex">
           <button
             className={controlButtonClasses}
             onClick={() => onAction('prev')}
@@ -64,7 +64,7 @@ const Modules = ({ data }: { data: ContentSection }) => {
 
       {data.cards && (
         <Carousel
-          className="mt-10"
+          className="mt-10 !px-6 lg:px-0 lg:overflow-hidden"
           data={data.cards}
           onSwiper={(swiper) => {
             carouselEl.current = swiper

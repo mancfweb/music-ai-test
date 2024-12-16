@@ -40,7 +40,7 @@ const config: Config = {
         },
       },
       animation: {
-        scrolling: 'scrolling 120s linear infinite',
+        scrolling: 'scrolling 80s linear infinite',
       },
     },
   },

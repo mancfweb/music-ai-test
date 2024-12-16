@@ -7,11 +7,11 @@ const HeroPlayer = ({ data }: { data: ContentSection }) => {
 
   return (
     <section
-      className={`flex items-center justify-center w-full py-[151px] ${hasBg && 'bg-center bg-no-repeat bg-cover'}`}
+      className={`flex items-center justify-center w-full py-[95px] lg:py-[151px] ${hasBg && 'bg-center bg-no-repeat bg-cover'}`}
       style={hasBg ? { backgroundImage: `url(${data.background?.url})` } : {}}>
-      <div className="flex flex-col items-center gap-10 max-w-[607px] p-6 desktop:py-[61px]">
+      <div className="flex flex-col items-center gap-10 max-w-[607px] p-6 lg:py-[61px]">
         <div>
-          <h1 className="text-white text-[52px] text-center leading-none">
+          <h1 className="text-white text-5xl text-center leading-none lg:text-[52px]">
             {data.title}
           </h1>
           <p className="pt-5 text-lg text-center leading-tight">

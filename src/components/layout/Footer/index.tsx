@@ -67,9 +67,9 @@ const Footer = ({ data }: { data: IGlobal }) => {
   const socialItems = Object.keys(data.social)
 
   return (
-    <footer className="relative py-20 bg-black overflow-hidden before:gradient-circle-one after:gradient-circle-two">
-      <div className="relative z-10 container mx-auto">
-        <div className="flex justify-between w-full">
+    <footer className="relative py-10 bg-black overflow-hidden before:gradient-circle-one after:gradient-circle-two lg:py-20">
+      <div className="relative z-10 container mx-auto px-6 lg:px-0">
+        <div className="flex flex-col justify-start w-full lg:flex-row lg:justify-between">
           <div className="flex flex-col">
             <div>
               <Logo />
@@ -77,7 +77,7 @@ const Footer = ({ data }: { data: IGlobal }) => {
             </div>
 
             <Select
-              className="my-10"
+              className="my-10 max-w-[56%] lg:max-w-auto"
               defaultValue={locale}
               onChange={(ev) => onChangeLocale(ev.target.value)}>
               <Select.Option value="en">English</Select.Option>
@@ -102,7 +102,7 @@ const Footer = ({ data }: { data: IGlobal }) => {
             </ul>
           </div>
 
-          <div className="flex gap-10">
+          <div className="flex flex-col gap-10 mt-10 lg:flex-row lg:mt-0">
             {data.footerMenu.map((item) => (
               <div
                 key={`footermenu-item-${item.id}`}
@@ -118,9 +118,9 @@ const Footer = ({ data }: { data: IGlobal }) => {
           </div>
         </div>
 
-        <hr className="mt-20 mb-10 border-mswhite-25" />
+        <hr className="mt-12 mb-10 border-mswhite-25 lg:mt-20" />
 
-        <div className="flex items-center justify-between w-full">
+        <div className="flex flex-col items-start justify-start w-full lg:flex-row lg:items-center lg:justify-between">
           <p>{data.copyright}</p>
           <p className="flex items-center gap-1.5 text-sm text-mswhite-40">
             Status{' '}
