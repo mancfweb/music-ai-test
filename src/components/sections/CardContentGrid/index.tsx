@@ -4,7 +4,7 @@ import Icon from '@/components/ui/Icon'
 
 const CardContentGrid = ({ data }: { data: ContentSection }) => {
   return (
-    <section className="container mx-auto px-6 py-20 lg:px-0">
+    <section className="container mx-auto px-6 py-20 2xl:px-4">
       <header className="flex flex-col gap-3 max-w-[585px] mx-auto mb-10 text-center">
         <p className="text-sm text-msalternative">{data.preTitle}</p>
         <h2 className="text-[32px] text-white">{data.title}</h2>

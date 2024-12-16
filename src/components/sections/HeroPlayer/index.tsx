@@ -31,7 +31,7 @@ const HeroPlayer = ({ data }: { data: ContentSection }) => {
     <section
       className={`flex items-center justify-center w-full py-[95px] lg:py-[151px] ${hasBg && 'bg-center bg-no-repeat bg-cover'}`}
       style={hasBg ? { backgroundImage: `url(${data.background?.url})` } : {}}>
-      <div className="flex flex-col items-center gap-10 max-w-[607px] px-6 lg:px-0">
+      <div className="flex flex-col items-center gap-10 max-w-[607px] px-6 xl:px-0">
         <div>
           <h1 className="text-white text-5xl text-center leading-none lg:text-[52px]">
             {data.title}

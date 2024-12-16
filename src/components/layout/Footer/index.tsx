@@ -68,7 +68,7 @@ const Footer = ({ data }: { data: IGlobal }) => {
 
   return (
     <footer className="relative py-10 bg-black overflow-hidden before:gradient-circle-one after:gradient-circle-two lg:py-20">
-      <div className="relative z-10 container mx-auto px-6 lg:px-0">
+      <div className="relative z-10 container mx-auto px-6 2xl:px-4">
         <div className="flex flex-col justify-start w-full lg:flex-row lg:justify-between">
           <div className="flex flex-col">
             <div>

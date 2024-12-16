@@ -27,7 +27,7 @@ const Header = ({ data }: { data: IGlobal }) => {
 
   return (
     <header
-      className={`fixed flex container px-6 mx-auto lg:py-[21px] lg:px-0 ${menuIsOpen ? headerClasses.mobileOpen : headerClasses.default} `}>
+      className={`fixed flex container px-6 mx-auto lg:py-[21px] 2xl:px-4 ${menuIsOpen ? headerClasses.mobileOpen : headerClasses.default} `}>
       <div className="flex items-center justify-between w-full py-6 lg:py-0 lg:w-auto">
         <Link href="/" title="Go to Home">
           <Logo />
