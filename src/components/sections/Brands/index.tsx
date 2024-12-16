@@ -10,11 +10,11 @@ const Brands = ({ data }: { data: ContentSection }) => {
         {[0, 1].map((item) => (
           <div
             key={`brands-carousel-group-${item}`}
-            className="flex items-center shrink-0 gap-10 w-full animate-scrolling">
+            className="flex items-center shrink-0 gap-10 min-w-full animate-scrolling">
             {data.brands?.map((brand) => (
               <div
                 key={`brand-item-${brand.id}`}
-                className="flex shrink-0 w-32">
+                className="flex items-center justify-center shrink-0 min-w-24">
                 <img src={brand.url} alt={brand.title} className="h-[40px]" />
               </div>
             ))}
